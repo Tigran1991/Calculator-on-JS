@@ -17,34 +17,34 @@
       <div class="buttons_field">
         <div class="theme_switcher_field">
           <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
+            <input type="checkbox" id="switchValue">
+            <span class="slider round" id="slider" onclick="changeCalculatorBackground()"></span>
           </label>
-          <p class="switch_theme_text">SWITCH THE THEME</p>
+          <p class="switchThemeText" id="switch_theme_text">SWITCH THE THEME</p>
         </div>
-        <button class="button_delete">C</button>
-        <button class="button_element">(</button>
-        <button class="button_element">)</button>
-        <button class="button_element">x</button>
-        <button class="button_element">&#8730</button>
-        <button class="button_element">%</button>
-        <button class="button_element">&plusmn</dibuttonv>
-        <button class="button_element">/</button>
-        <button class="button_seven">7</button>
-        <button class="button_eight">8</button>
-        <button class="button_nine">9</button>
-        <button class="button_element">-</button>
-        <button class="button_four">4</button>
-        <button class="button_five">5</button>
-        <button class="button_six">6</button>
-        <button class="button_element">+</button>
-        <button class="button_one" value="1">1</button>
-        <button class="button_two">2</button>
-        <button class="button_three">3</button>
-        <button class="button_result">=</button>
-        <button class="button_element">.</button>
-        <button class="button_element">0</button>
-        <button class="button_element">x</i></button>
+        <button class="deleteBtn" id="btn_delete">C</button>
+        <button class="actionBtn">(</button>
+        <button class="actionBtn">)</button>
+        <button class="actionBtn">x</button>
+        <button class="actionBtn">&#8730</button>
+        <button class="actionBtn">%</button>
+        <button class="actionBtn">&plusmn</dibuttonv>
+        <button class="actionBtn">/</button>
+        <button class='digitalBtn' id="button_seven">7</button>
+        <button class='digitalBtn' id="button_eight">8</button>
+        <button class='digitalBtn' id="button_nine">9</button>
+        <button class='actionBtn' id="btn_subtract">-</button>
+        <button class='digitalBtn' id="button_four">4</button>
+        <button class='digitalBtn' id="button_five">5</button>
+        <button class='digitalBtn' id="button_six">6</button>
+        <button class='actionBtn' class="button_element">+</button>
+        <button class='digitalBtn' id="button_one" value="1">1</button>
+        <button class='digitalBtn' id="button_two">2</button>
+        <button class='digitalBtn' id="button_three">3</button>
+        <button class="resultBtn" id="btn_result">=</button>
+        <button class="digitalBtn" id="btn_dot">.</button>
+        <button class="digitalBtn" id="btn_zero">0</button>
+        <button class="actionBtn" id="btn_backspace">x</button>
       </div>
     </div>
     <script src="./script.js"></script>

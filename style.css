@@ -4,15 +4,9 @@
   width: 320px;
   height: 560px;
   padding: 10px;
-  background-color: green;
-  border-radius: 21px;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    0deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(66, 68, 84, 1) 100%
-  );
-  border: 1px solid #333;
+  border-radius: 22px;
+  background: rgb(202, 184, 184);
+  border: 2px solid #333;
   font-family: "Merriweather Sans", sans-serif;
 }
 
@@ -63,60 +57,52 @@
   grid-column: span 4;
 }
 
-.button_element {
+.actionBtn {
   display: grid;
   align-items: center;
   justify-content: center;
-  border: 1px solid #fff;
+  border: 2px solid #333;
   border-radius: 20px;
-  color: #fff;
+  color: #333;
   cursor: pointer;
-  background: transparent;
+  background: rgb(139, 209, 106);
   font-size: 20px;
 }
 
-.button_one,
-.button_two,
-.button_three,
-.button_four,
-.button_five,
-.button_six,
-.button_seven,
-.button_eight,
-.button_nine {
+.digitalBtn {
   display: grid;
   align-items: center;
   justify-content: center;
-  border: 1px solid #fff;
+  border: 2px solid #333;
   border-radius: 20px;
-  color: #fff;
+  color: #333;
   cursor: pointer;
-  background: transparent;
+  background: rgb(211 220 195);
   font-size: 20px;
 }
 
-.button_delete {
+.deleteBtn {
   display: grid;
   align-items: center;
   justify-content: center;
-  border: 1px solid #fff;
+  border: 2px solid #333;
   border-radius: 20px;
-  color: #fff;
+  color: #333;
   cursor: pointer;
   background: rgb(197, 104, 17);
   font-size: 20px;
 }
 
-.button_result {
+.resultBtn {
   display: grid;
   align-items: center;
   justify-content: center;
   grid-row: span 2;
-  border: 1px solid #fff;
+  border: 2px solid #333;
   border-radius: 20px;
-  color: #fff;
+  color: #333;
   cursor: pointer;
-  background: transparent;
+  background: rgb(19, 192, 42);
   font-size: 20px;
 }
 
@@ -143,7 +129,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: rgb(243, 232, 232);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -161,11 +147,11 @@
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #806f6f;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 2px #806f6f;
 }
 
 input:checked + .slider:before {
@@ -183,7 +169,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.switch_theme_text {
-  color: #fff;
+.switchThemeText {
+  color: #333;
   margin-left: 10px;
 }
