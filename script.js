@@ -1,12 +1,12 @@
 const actionBtns = document.getElementsByClassName("actionBtn")
 const digitalBtns = document.getElementsByClassName("digitalBtn")
 const resultButton = document.getElementById("btn_result")
-const resultField = document.querySelector(".result_field")
 const deleteBtn = document.getElementById("btn_delete")
 const switchThemeText = document.getElementById("switch_theme_text")
 const calculator = document.querySelector(".calculator")
 const switchValue = document.getElementById("switchValue")
 const inputElement = document.getElementById("input_element")
+const resultField = document.getElementById("result_field")
 
 const changeCalculatorBackground = () => {
   console.log(switchValue.checked)
@@ -46,5 +46,6 @@ const getButtonsValue = (value) => {
 }
 
 const getResult = () => {
-  inputElement.value = eval(inputElement.value)
+  const result = eval(inputElement.value)
+  resultField.textContent = `= ${result}`
 }
