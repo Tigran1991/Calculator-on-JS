@@ -28,7 +28,8 @@
   border: none;
   outline: none;
   background: transparent;
-  color: #fff;
+  color: #333;
+  font-size: 20px;
 }
 
 .result_field {

@@ -11,7 +11,7 @@
   <body>
     <div class="calculator">
       <div class="input_field">
-        <input type="text" dir="rtl" class="todo" />
+        <input type="text" class="inputElement" id="input_element"/>
       </div>
       <div class="result_field"></div>
       <div class="buttons_field">
@@ -23,27 +23,27 @@
           <p class="switchThemeText" id="switch_theme_text">SWITCH THE THEME</p>
         </div>
         <button class="deleteBtn" id="btn_delete">C</button>
-        <button class="actionBtn">(</button>
-        <button class="actionBtn">)</button>
-        <button class="actionBtn">x</button>
-        <button class="actionBtn">&#8730</button>
-        <button class="actionBtn">%</button>
-        <button class="actionBtn">&plusmn</dibuttonv>
-        <button class="actionBtn">/</button>
-        <button class='digitalBtn' id="button_seven">7</button>
-        <button class='digitalBtn' id="button_eight">8</button>
-        <button class='digitalBtn' id="button_nine">9</button>
-        <button class='actionBtn' id="btn_subtract">-</button>
-        <button class='digitalBtn' id="button_four">4</button>
-        <button class='digitalBtn' id="button_five">5</button>
-        <button class='digitalBtn' id="button_six">6</button>
-        <button class='actionBtn' class="button_element">+</button>
-        <button class='digitalBtn' id="button_one" value="1">1</button>
-        <button class='digitalBtn' id="button_two">2</button>
-        <button class='digitalBtn' id="button_three">3</button>
-        <button class="resultBtn" id="btn_result">=</button>
-        <button class="digitalBtn" id="btn_dot">.</button>
-        <button class="digitalBtn" id="btn_zero">0</button>
+        <button class="actionBtn" onclick="getButtonsValue(value)" value="(">(</button>
+        <button class="actionBtn" onclick="getButtonsValue(value)" value=")">)</button>
+        <button class="actionBtn" onclick="getButtonsValue(value)" value="x">x</button>
+        <button class="actionBtn" onclick="getButtonsValue(value)" value="sqrt">&#8730</button>
+        <button class="actionBtn" onclick="getButtonsValue(value)" value="%">%</button>
+        <button class="actionBtn" onclick="getButtonsValue(value)" value="">&plusmn</dibuttonv>
+        <button class="actionBtn" onclick="getButtonsValue(value)" value="/">/</button>
+        <button class='digitalBtn' id="button_seven" onclick="getButtonsValue(value)" value="7">7</button>
+        <button class='digitalBtn' id="button_eight" onclick="getButtonsValue(value)" value="8">8</button>
+        <button class='digitalBtn' id="button_nine" onclick="getButtonsValue(value)" value="9">9</button>
+        <button class='actionBtn' id="btn_subtract" onclick="getButtonsValue(value)" value="-">-</button>
+        <button class='digitalBtn' id="button_four" onclick="getButtonsValue(value)" value="4">4</button>
+        <button class='digitalBtn' id="button_five" onclick="getButtonsValue(value)" value="5">5</button>
+        <button class='digitalBtn' id="button_six" onclick="getButtonsValue(value)" value="6">6</button>
+        <button class='actionBtn' class="button_element" onclick="getButtonsValue(value)" value="+">+</button>
+        <button class='digitalBtn' id="button_one" onclick="getButtonsValue(value)" value="1">1</button>
+        <button class='digitalBtn' id="button_two"  onclick="getButtonsValue(value)" value="2">2</button>
+        <button class='digitalBtn' id="button_three" onclick="getButtonsValue(value)" value="3">3</button>
+        <button class="resultBtn" id="btn_result"  onclick="getResult()">=</button>
+        <button class="digitalBtn" id="btn_dot"  onclick="getButtonsValue(value)" value=".">.</button>
+        <button class="digitalBtn" id="btn_zero"  onclick="getButtonsValue(value)" value="0">0</button>
         <button class="actionBtn" id="btn_backspace">x</button>
       </div>
     </div>

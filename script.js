@@ -6,6 +6,7 @@ const deleteBtn = document.getElementById("btn_delete")
 const switchThemeText = document.getElementById("switch_theme_text")
 const calculator = document.querySelector(".calculator")
 const switchValue = document.getElementById("switchValue")
+const inputElement = document.getElementById("input_element")
 
 const changeCalculatorBackground = () => {
   console.log(switchValue.checked)
@@ -38,4 +39,12 @@ const changeCalculatorBackground = () => {
     switchThemeText.style.color = "#333"
     resultButton.style.border = "2px solid #333"
   }
+}
+
+const getButtonsValue = (value) => {
+  inputElement.value += value
+}
+
+const getResult = () => {
+  inputElement.value = eval(inputElement.value)
 }
