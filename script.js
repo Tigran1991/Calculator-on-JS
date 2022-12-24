@@ -4,8 +4,8 @@ const resultButton = document.querySelector("#btn_result")
 const deleteBtn = document.querySelector("#btn_delete")
 const switchThemeText = document.querySelector("#switch_theme_text")
 const calculator = document.querySelector("#calculator")
-const switch_theme = document.querySelector("#switch_theme")
-const inputElement = document.querySelector("#entered_actions")
+const switchTheme = document.querySelector("#switch_theme")
+const enteredValue = document.querySelector("#entered_actions")
 const resultField = document.querySelector("#result_field")
 
 const changeStyles = (background, color) => {
@@ -23,7 +23,7 @@ const changeStyles = (background, color) => {
 }
 
 const changeCalculatorBackground = () => {
-  if (!switch_theme.checked) {
+  if (!switchTheme.checked) {
     changeStyles(
       `linear-gradient(
       0deg,
@@ -32,24 +32,23 @@ const changeCalculatorBackground = () => {
     )`,
       "#fff"
     )
-  } else if (switch_theme.checked) {
+  } else if (switchTheme.checked) {
     changeStyles("rgb(202, 184, 184)", "#333")
   }
 }
 
 const getButtonsValue = (value) => {
-  inputElement.value += value
+  enteredValue.value += value
 }
 
 const getResult = () => {
-  const inputCurrentValue = inputElement.value
-  if (inputCurrentValue.includes("%")) {
-    const inputUpdatedValue = inputCurrentValue.replace("%", "*") + "/100"
-    console.log(inputUpdatedValue)
-    const result = eval(inputUpdatedValue)
+  const enteredCurrentValue = enteredValue.value
+  if (enteredCurrentValue.includes("%")) {
+    const enteredUpdatedValue = enteredCurrentValue.replace("%", "*") + "/100"
+    const result = eval(enteredUpdatedValue)
     return (resultField.textContent = `= ${result}`)
   } else {
-    const result = eval(inputCurrentValue)
+    const result = eval(enteredCurrentValue)
     return (resultField.textContent = `= ${result}`)
   }
 }
