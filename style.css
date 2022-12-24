@@ -1,4 +1,4 @@
-.calculator {
+#calculator {
   display: flex;
   flex-direction: column;
   width: 320px;
@@ -10,7 +10,7 @@
   font-family: "Merriweather Sans", sans-serif;
 }
 
-.input_field {
+#input_field {
   display: flex;
   width: 100%;
   height: 100px;
@@ -22,7 +22,7 @@
   justify-content: center;
 }
 
-.input_field input {
+#input_field input {
   width: 100%;
   height: 100%;
   border: none;
@@ -33,17 +33,17 @@
   text-align: right;
 }
 
-.resultField {
+#result_field {
   display: flex;
   justify-content: flex-end;
   width: 100%;
   height: 40px;
   box-sizing: border-box;
   background: transparent;
-  font-size: 20px;
+  font-size: 40px;
 }
 
-.buttons_field {
+#buttons_field {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(7, 1fr);
@@ -53,7 +53,7 @@
   padding-top: 10px;
 }
 
-.theme_switcher_field {
+#theme_switcher_field {
   display: flex;
   align-items: center;
   justify-content: start;
@@ -84,7 +84,7 @@
   font-size: 20px;
 }
 
-.deleteBtn {
+#btn_delete {
   display: grid;
   align-items: center;
   justify-content: center;
@@ -96,7 +96,7 @@
   font-size: 20px;
 }
 
-.resultBtn {
+#btn_result {
   display: grid;
   align-items: center;
   justify-content: center;
@@ -110,7 +110,7 @@
 }
 
 /* The switch - the box around the slider */
-.switch {
+#switch {
   position: relative;
   display: inline-block;
   width: 60px;
@@ -118,7 +118,7 @@
 }
 
 /* Hide default HTML checkbox */
-.switch input {
+#switch input {
   opacity: 0;
   width: 0;
   height: 0;
