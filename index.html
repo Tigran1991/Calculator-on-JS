@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
   <head>
-    <meta charset='UTF-8' />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator on JS</title>
-    <link rel='stylesheet' href='./style.css' />
-    <link href='https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap' rel='stylesheet'>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id='calculator'>
@@ -20,34 +23,37 @@
             <input type='checkbox' id='switch_theme'>
             <span class='slider round' id='slider' onclick='changeCalculatorBackground()'></span>
           </label>
-          <p class='switchThemeText' id='switch_theme_text'>SWITCH THE THEME</p>
+          <p id='switch_theme_text'>SWITCH THE THEME</p>
         </div>
         <button id='btn_delete'>C</button>
-        <button class='actionBtn' onclick='getButtonsValue(value)' value='('>(</button>
-        <button class='actionBtn' onclick='getButtonsValue(value)' value=')'>)</button>
-        <button class='actionBtn' onclick='getButtonsValue(value)' value='*'>x</button>
-        <button class='actionBtn' onclick='getButtonsValue(value)' value='sqrt'>&#8730</button>
-        <button class='actionBtn' onclick='getButtonsValue(value)' value='%'>%</button>
-        <button class='actionBtn' onclick='getButtonsValue(value)' value=''>&plusmn</dibuttonv>
-        <button class='actionBtn' onclick='getButtonsValue(value)' value='/'>/</button>
-        <button class='digitalBtn' id='button_seven' onclick='getButtonsValue(value)' value='7'>7</button>
-        <button class='digitalBtn' id='button_eight' onclick='getButtonsValue(value)' value='8'>8</button>
-        <button class='digitalBtn' id='button_nine' onclick='getButtonsValue(value)' value='9'>9</button>
-        <button class='actionBtn' id='btn_subtract' onclick='getButtonsValue(value)' value='-'>-</button>
-        <button class='digitalBtn' id='button_four' onclick='getButtonsValue(value)' value='4'>4</button>
-        <button class='digitalBtn' id='button_five' onclick='getButtonsValue(value)' value='5'>5</button>
-        <button class='digitalBtn' id='button_six' onclick='getButtonsValue(value)' value='6'>6</button>
-        <button class='actionBtn' class='button_element' onclick='getButtonsValue(value)' value='+'>+</button>
-        <button class='digitalBtn' id='button_one' onclick='getButtonsValue(value)' value='1'>1</button>
-        <button class='digitalBtn' id='button_two'  onclick='getButtonsValue(value)' value='2'>2</button>
-        <button class='digitalBtn' id='button_three' onclick='getButtonsValue(value)' value='3'>3</button>
-        <button id='btn_result'  onclick='getResult()'>=</button>
-        <button class='digitalBtn' id='btn_dot'  onclick='getButtonsValue(value)' value='.'>.</button>
-        <button class='digitalBtn' id='btn_zero'  onclick='getButtonsValue(value)' value='0'>0</button>
-        <button class='actionBtn' id='btn_backspace'>x</button>
+        <button class='btn action' value='('>(</button>
+        <button class='btn action' value=')'>)</button>
+        <button class='btn action' value='*'>x</button>
+        <button class='btn action' value='sqrt'>&#8730</button>
+        <button class='btn action' value='%'>%</button>
+        <button class='btn action' value=''>&plusmn</dibuttonv>
+        <button class='btn action' value='/'>/</button>
+        <button class='btn digital' value='7'>7</button>
+        <button class='btn digital' value='8'>8</button>
+        <button class='btn digital' value='9'>9</button>
+        <button class='btn action' id='btn_subtract' value='-'>-</button>
+        <button class='btn digital' value='4'>4</button>
+        <button class='btn digital' value='5'>5</button>
+        <button class='btn digital' value='6'>6</button>
+        <button class='btn action' value='+'>+</button>
+        <button class='btn digital' value='1'>1</button>
+        <button class='btn digital' value='2'>2</button>
+        <button class='btn digital' value='3'>3</button>
+        <button id='btn_result' onclick='getResult()'>=</button>
+        <button class='btn digital' value='.'>.</button>
+        <button class='btn digital' value='0'>0</button>
+        <button class='btn action'>x</button>
       </div>
     </div>
-    <script src='./script.js'></script>
-    <script src='https://kit.fontawesome.com/d71b18c587.js' crossorigin='anonymous'></script>
+    <script src="./script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d71b18c587.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

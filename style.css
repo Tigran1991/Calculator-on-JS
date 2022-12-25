@@ -60,7 +60,7 @@
   grid-column: span 4;
 }
 
-.actionBtn {
+.btn.action {
   display: grid;
   align-items: center;
   justify-content: center;
@@ -72,7 +72,7 @@
   font-size: 20px;
 }
 
-.digitalBtn {
+.btn.digital {
   display: grid;
   align-items: center;
   justify-content: center;
@@ -172,7 +172,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.switchThemeText {
+#switch_theme_text {
   color: #333;
   margin-left: 10px;
 }
