@@ -1,6 +1,8 @@
 const actionBtns = document.getElementsByClassName("btn action")
 const digitalBtns = document.getElementsByClassName("btn digital")
 const buttons = document.getElementsByClassName("btn")
+const backspaceBtn = document.querySelector("#btn_backspace")
+console.log(backspaceBtn)
 const resultBtn = document.querySelector("#btn_result")
 const deleteBtn = document.querySelector("#btn_delete")
 const switchThemeText = document.querySelector("#switch_theme_text")
@@ -28,6 +30,18 @@ const addClickEventOnBtns = () => {
 
 addClickEventOnBtns()
 
+const backspaceEneterdValue = () => {
+  const enteredCurrentValue = enteredValue.value
+  const updatedEnteredValue = enteredCurrentValue.slice(0, -1)
+  enteredValue.value = updatedEnteredValue
+  return updatedEnteredValue
+}
+
+const deleteEnteredValue = () => {
+  enteredValue.value = ""
+  resultField.textContent = ""
+}
+
 const getResult = () => {
   const enteredCurrentValue = enteredValue.value
   if (enteredCurrentValue.includes("%")) {
@@ -44,6 +58,8 @@ const getResult = () => {
   }
 }
 
+backspaceBtn.addEventListener("click", backspaceEneterdValue)
+deleteBtn.addEventListener("click", deleteEnteredValue)
 resultBtn.addEventListener("click", getResult)
 
 const changeStyles = (background, color) => {
@@ -58,6 +74,8 @@ const changeStyles = (background, color) => {
   deleteBtn.style.color = color
   switchThemeText.style.color = color
   resultBtn.style.border = `2px solid ${color}`
+  enteredValue.style.color = "#fff"
+  resultField.style.color = "#fff"
 }
 
 const changeCalculatorBackground = () => {
