@@ -11,7 +11,14 @@ const resultField = document.querySelector("#result_field")
 
 const addClickEventOnBtns = () => {
   const getButtonsValue = (e) => {
-    enteredValue.value += e.target.value
+    if (resultField.textContent !== "") {
+      enteredValue.value = ""
+      resultField.textContent = ""
+      enteredValue.value += e.target.textContent
+    } else {
+      console.log(e.target.textContent)
+      enteredValue.value += e.target.textContent
+    }
   }
 
   for (const button of buttons) {
@@ -26,6 +33,10 @@ const getResult = () => {
   if (enteredCurrentValue.includes("%")) {
     const enteredUpdatedValue = enteredCurrentValue.replace("%", "*") + "/100"
     const result = eval(enteredUpdatedValue)
+    return (resultField.textContent = `= ${result}`)
+  } else if (enteredCurrentValue.includes("√")) {
+    const rootValue = enteredCurrentValue.substring(1)
+    const result = Math.sqrt(rootValue)
     return (resultField.textContent = `= ${result}`)
   } else {
     const result = eval(enteredCurrentValue)
