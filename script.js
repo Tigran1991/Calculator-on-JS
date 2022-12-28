@@ -1,8 +1,8 @@
+const slider = document.querySelector(".slider")
 const actionBtns = document.getElementsByClassName("btn action")
 const digitalBtns = document.getElementsByClassName("btn digital")
 const buttons = document.getElementsByClassName("btn")
 const backspaceBtn = document.querySelector("#btn_backspace")
-console.log(backspaceBtn)
 const resultBtn = document.querySelector("#btn_result")
 const deleteBtn = document.querySelector("#btn_delete")
 const switchThemeText = document.querySelector("#switch_theme_text")
@@ -10,6 +10,21 @@ const calculator = document.querySelector("#calculator")
 const switchTheme = document.querySelector("#switch_theme")
 const enteredValue = document.querySelector("#entered_actions")
 const resultField = document.querySelector("#result_field")
+
+const changeCalculatorBackground = () => {
+  if (!switchTheme.checked) {
+    changeStyles(
+      `linear-gradient(
+      0deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(66, 68, 84, 1) 100%
+    )`,
+      "#fff"
+    )
+  } else if (switchTheme.checked) {
+    changeStyles("rgb(202, 184, 184)", "#333")
+  }
+}
 
 const addClickEventOnBtns = () => {
   const getButtonsValue = (e) => {
@@ -58,6 +73,7 @@ const getResult = () => {
   }
 }
 
+slider.addEventListener("click", changeCalculatorBackground)
 backspaceBtn.addEventListener("click", backspaceEneterdValue)
 deleteBtn.addEventListener("click", deleteEnteredValue)
 resultBtn.addEventListener("click", getResult)
@@ -74,21 +90,6 @@ const changeStyles = (background, color) => {
   deleteBtn.style.color = color
   switchThemeText.style.color = color
   resultBtn.style.border = `2px solid ${color}`
-  enteredValue.style.color = "#fff"
-  resultField.style.color = "#fff"
-}
-
-const changeCalculatorBackground = () => {
-  if (!switchTheme.checked) {
-    changeStyles(
-      `linear-gradient(
-      0deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(66, 68, 84, 1) 100%
-    )`,
-      "#fff"
-    )
-  } else if (switchTheme.checked) {
-    changeStyles("rgb(202, 184, 184)", "#333")
-  }
+  enteredValue.style.color = color
+  resultField.style.color = color
 }
