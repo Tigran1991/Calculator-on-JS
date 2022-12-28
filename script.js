@@ -1,3 +1,47 @@
+const calculator = document.querySelector("#calculator")
+
+const makeCalculator = () => {
+  return (calculator.innerHTML = `
+  <div id='input_field'>
+  <input type='text' id='entered_actions'/>
+</div>
+<div id='result_field'></div>
+<div id='buttons_field'>
+  <div id='theme_switcher_field'>
+    <label id='switch'>
+      <input type='checkbox' id='switch_theme'>
+      <span class='slider round'></span>
+    </label>
+    <p id='switch_theme_text'>SWITCH THE THEME</p>
+  </div>
+    <button id='btn_delete'>C</button>
+    <button class='btn action'>(</button>
+    <button class='btn action'>)</button>
+    <button class='btn action'>x</button>
+    <button class='btn action'>&#8730</button>
+    <button class='btn action'>%</button>
+    <button class='btn action'>&plusmn</dibuttonv>
+    <button class='btn action'>/</button>
+    <button class='btn digital'>7</button>
+    <button class='btn digital'>8</button>
+    <button class='btn digital'>9</button>
+    <button class='btn action' id='btn_subtract'>-</button>
+    <button class='btn digital'>4</button>
+    <button class='btn digital'>5</button>
+    <button class='btn digital'>6</button>
+    <button class='btn action'>+</button>
+    <button class='btn digital'>1</button>
+    <button class='btn digital'>2</button>
+    <button class='btn digital'>3</button>
+    <button id='btn_result'>=</button>
+    <button class='btn digital'>.</button>
+    <button class='btn digital'>0</button>
+    <button id="btn_backspace">x</button>
+</div>`)
+}
+
+makeCalculator()
+
 const slider = document.querySelector(".slider")
 const actionBtns = document.getElementsByClassName("btn action")
 const digitalBtns = document.getElementsByClassName("btn digital")
@@ -6,7 +50,6 @@ const backspaceBtn = document.querySelector("#btn_backspace")
 const resultBtn = document.querySelector("#btn_result")
 const deleteBtn = document.querySelector("#btn_delete")
 const switchThemeText = document.querySelector("#switch_theme_text")
-const calculator = document.querySelector("#calculator")
 const switchTheme = document.querySelector("#switch_theme")
 const enteredValue = document.querySelector("#entered_actions")
 const resultField = document.querySelector("#result_field")
@@ -33,7 +76,6 @@ const addClickEventOnBtns = () => {
       resultField.textContent = ""
       enteredValue.value += e.target.textContent
     } else {
-      console.log(e.target.textContent)
       enteredValue.value += e.target.textContent
     }
   }
